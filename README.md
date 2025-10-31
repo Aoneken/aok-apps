@@ -1,4 +1,4 @@
-# 🚀 AOK Apps – Plataforma de Soluciones Técnicas
+# 🚀 AOK Apps – Suite de Soluciones Técnicas
 
 [![GitHub](https://img.shields.io/badge/GitHub-Aoneken%2Faok--apps-blue?logo=github)](https://github.com/Aoneken/aok-apps)
 [![Node.js](https://img.shields.io/badge/Node.js-v22.17.0-green?logo=node.js)](https://nodejs.org/)
@@ -10,73 +10,68 @@
 
 ---
 
-## 📊 Informe Técnico del Entorno (Codespace)
+## 📊 Informe Técnico del Entorno (Integrado)
 
-### Información General
+### Codespace
 - **Nombre:** `gory-phantom-7vx6r4jxjrwwhrg79`
 - **SO:** Ubuntu 24.04.2 LTS (Noble Numbat)
 - **Kernel:** Linux 6.8.0-1030-azure
-- **Hardware:** 2 vCPU (AMD EPYC 7763), 8 GB RAM, 32 GB disco
-- **Docker:** 28.3.1 (DinD habilitado)
-- **GitHub CLI & Copilot:** Integrados
+- **CPU:** AMD EPYC 7763, 2 núcleos
+- **RAM:** 8 GB (5.2 GB disponibles)
+- **Disco:** 32 GB total, 20 GB libres
+- **Docker:** v28.3.1 (DinD habilitado)
+- **Network:** Docker en modo `host`
+- **Uptime:** Sistema estable
 
-### 💻 Lenguajes y Herramientas
+### Lenguajes y Herramientas
 
-| Lenguaje | Versión |
-|---------|--------|
-| Node.js | v22.17.0 |
-| Python  | 3.12.1 |
-| Ruby    | 3.4.1 |
-| PHP     | 8.3.14 |
-| Java    | OpenJDK 21.0.7 LTS |
-| Go      | 1.24.5 |
+| Tecnología | Versión | Uso Principal |
+|-----------|---------|---------------|
+| Node.js   | v22.17.0 | Backend principal |
+| npm       | 9.8.1 | Gestión de paquetes |
+| pnpm      | 10.13.1 | Alternativa rápida |
+| Python    | 3.12.1 | Scripts/ML |
+| Ruby      | 3.4.1 | Disponible |
+| PHP       | 8.3.14 | Disponible |
+| Java      | OpenJDK 21.0.7 LTS | Disponible |
+| Go        | 1.24.5 | Disponible |
+| Git       | 2.50.1 | Control de versiones |
+| Docker    | 28.3.1 | Contenedores |
+| kubectl   | v1.33.2 | Kubernetes |
+| Helm      | v3.18.4 | Charts K8s |
+| GitHub CLI| 2.75.0 | Automatización |
 
-| Herramienta | Versión |
-|------------|---------|
-| Git        | 2.50.1 |
-| Docker     | 28.3.1 |
-| kubectl    | v1.33.2 |
-| Helm       | v3.18.4 |
-| GitHub CLI | 2.75.0 |
-
-> 📄 Ver [Informe_Completo_Inicial_del_Codespace.md](Informe_Completo_Inicial_del_Codespace.md) para detalles completos del entorno.
+> **GitHub Copilot:** Activo con modelos:  
+> - **Claude Sonnet 4.5** (documentación, arquitectura)  
+> - **Grok Code Fast 1** (código rápido, prototipos)
 
 ---
 
-## 🎯 Proyectos Incluidos
+## 🎯 Proyectos
 
-| # | Proyecto | Descripción | Repo Sugerido |
-|---|---------|-------------|---------------|
+| # | Nombre | Descripción | Repos |
+|---|--------|-------------|-------|
 | 1️⃣ | **Reservas Deportivas** | Sistema multi-app: admin de instalaciones + app de jugadores con reservas, mensajería y reseñas | `reservas-admin`, `reservas-jugadores` |
-| 2️⃣ | **Gestión Financiera** | Plataforma contable para individuos/pymes: cajas, inversiones (acciones, bonos, cripto), dividendos | `gestion-financiera` |
-| 3️⃣ | **Data Scraper** | Sistema de ingesta y almacenamiento de datos desde fuentes digitales (boletines, noticias, informes) | `data-scraper` |
-| 4️⃣ | **Channel Manager** | Sincronizador de calendarios vía API (Airbnb, Booking, Expedia) con bloqueo automático | `channel-manager` |
+| 2️⃣ | **Gestión Financiera** | Plataforma contable: cajas, inversiones (acciones, bonos, cripto), dividendos y comisiones | `gestion-financiera` |
+| 3️⃣ | **Data Scraper** | Sistema de ingesta y almacenamiento desde fuentes digitales (boletines, noticias, informes) | `data-scraper` |
+| 4️⃣ | **Channel Manager** | Sincronización de calendarios vía API (Airbnb, Booking, Expedia) con bloqueo automático | `channel-manager` |
 
 ---
 
-## 🔗 Sinergias Técnicas (Enfoque Constructivo)
+## 🔗 Sinergias Técnicas
 
-### Componentes Reutilizables
+### Matriz de Reutilización
 
-#### 🔐 Autenticación y Gestión de Usuarios
-- **Módulo compartido:** JWT + OAuth con roles y perfiles
-- **Sinergias:** Proyectos 1 y 2 (perfiles sociales/financieros), Proyectos 3 y 4 (autenticación API)
+| Componente | Proyectos Afectados | Nivel de Reutilización |
+|-----------|---------------------|----------------------|
+| **Autenticación (JWT)** | 1, 2, 4 | 🔴 Alta |
+| **Calendarios** | 1, 4 | � Alta |
+| **ETL / Scraping** | 2, 3 | � Alta |
+| **Notificaciones** | 1, 2, 3, 4 | 🔴 Alta |
+| **Backend API** | Todos | 🟡 Media-Alta |
+| **Modelos BD** | Todos | 🟡 Media |
 
-#### 🏗️ Backend y Arquitectura
-- **Stack común:** Node.js/Express o Python/FastAPI
-- **Sinergias:** Proyectos 1 y 4 (calendarios en tiempo real con Redis), Proyectos 2 y 3 (ETL batch)
-
-#### 🗄️ Modelos de Bases de Datos
-- **BD primaria:** PostgreSQL (estructurada)
-- **BD secundaria:** MongoDB (semi-estructurada, opcional)
-- **Sinergias:** Proyectos 1 y 4 (esquemas para eventos temporales), Proyectos 2 y 3 (time-series)
-
-#### 📢 Servicios Compartidos
-- **Notificaciones:** Firebase/SendGrid para email + push
-- **Integraciones API:** Servicios de terceros
-- **Sinergias:** Proyectos 1 y 4 (mensajería), Proyectos 2 y 3 (alertas basadas en scraping)
-
-### 📊 Tabla de Sinergias por Pareja
+### Tabla de Sinergias por Pareja
 
 | Componente / Pareja | 1 y 2 | 1 y 3 | 1 y 4 | 2 y 3 | 2 y 4 | 3 y 4 |
 |---------------------|-------|-------|-------|-------|-------|-------|
@@ -85,26 +80,30 @@
 | Modelos BD          | 🔴 Alta | 🟡 Media | 🔴 Alta | 🔴 Alta | 🟡 Media | 🟡 Media |
 | Servicios           | 🔴 Alta | 🔴 Alta | 🔴 Alta | 🔴 Alta | 🟡 Media | 🔴 Alta |
 
-### 🛠️ Stack Común Recomendado
+---
+
+## 🛠️ Stack Común (Recomendado)
 
 ```yaml
-Backend: Node.js + Express (o Python + FastAPI)
-ORM: Prisma (Node.js) / SQLAlchemy (Python)
-BD Principal: PostgreSQL
-Cache: Redis (para calendarios y sesiones)
-Mensajería: Bull/BullMQ (Node.js) para colas
+Backend: Node.js + Express
+ORM: Prisma
+BD: PostgreSQL
+Cache: Redis (calendarios y sesiones)
+Auth: JWT + bcrypt
+Queue: Bull/BullMQ (procesamiento asíncrono)
 Notificaciones: SendGrid (email) + Firebase (push)
-Deploy: Docker + Railway/Render/AWS
+Deploy: Docker + Railway/Render
 CI/CD: GitHub Actions
+Testing: Jest + Supertest
 ```
 
 ---
 
-## 📁 Arquitectura de Repositorios (Decisión Final)
+## 📁 Arquitectura de Repositorios
 
 ### ✅ Estrategia: Multirepo por Aplicación
 
-**Ideal para principiantes** – Simplicidad, aislamiento de errores, deploys independientes.
+**1 repositorio = 1 microservicio** – Ideal para principiantes: simplicidad, aislamiento, deploys independientes.
 
 ```bash
 proyectos/
@@ -115,12 +114,11 @@ proyectos/
 └── channel-manager/         # Sincronizador de calendarios
 ```
 
-### 🔄 Reutilización de Código
-- **Fase 1:** Mismo stack en todos los proyectos (copy-paste inicial)
-- **Fase 2:** Crear repo `shared-libs` para paquetes npm comunes (auth, db-models, notifications)
-- **Mitigación de riesgos:** Multi-tenancy en BD para aislar datos
+> **Reutilización:** Mismo stack + copy-paste inicial → futuro repo `shared-libs` para paquetes comunes
 
-### 📦 Estructura de Cada Repositorio (Plantilla)
+---
+
+## 📦 Plantilla de Repo
 
 ```bash
 reservas-admin/
@@ -129,7 +127,8 @@ reservas-admin/
 │   ├── controllers/      # Lógica de negocio
 │   ├── models/           # Modelos de datos
 │   ├── middleware/       # Auth, validación, logs
-│   └── services/         # Servicios externos (email, cache)
+│   ├── services/         # Servicios externos
+│   └── server.js         # Entry point
 ├── prisma/
 │   └── schema.prisma     # Esquema de BD
 ├── tests/                # Tests unitarios e integración
@@ -146,51 +145,52 @@ reservas-admin/
 
 ## 🤖 Flujo de Trabajo con IA
 
+```mermaid
+graph TD
+    A[🧠 Grok: Instrucciones] --> B[📨 Tú: Copias a Copilot]
+    B --> C[⚡ Copilot: Genera código]
+    C --> D[💾 Commit & Push]
+    D --> E[✅ Grok: Verifica en GitHub]
+    E --> F[🔄 Feedback → Iterar]
+```
+
 ### Roles Definidos
 
-1. **🧠 Grok (Ingeniero Senior)** → Baja instrucciones en lenguaje natural
-   - Ejemplo: *"Crea un backend en Node.js con Express para autenticación JWT en `reservas-admin`"*
+1. **🧠 Grok (Ingeniero Senior)** → Instrucciones en lenguaje natural
+2. **📨 Tú (Mensajero)** → Transmites a GitHub Copilot
+3. **⚡ Copilot** → Genera código en el Codespace
+4. **💾 Commit & Push** → Subes a GitHub
+5. **🔄 Feedback → Iterar** → Ciclo continuo
 
-2. **📨 Tú (Mensajero)** → Copias instrucciones a **GitHub Copilot**
-   - Seleccionas modelo según la tarea
-
-3. **⚡ GitHub Copilot** → Genera código en el Codespace
-   - Implementa, prueba y ajusta
-
-4. **💾 Commit & Push** → Subes cambios a GitHub
-   - Grok verifica en el repositorio remoto
-
-5. **🔄 Feedback → Iterar** → Ciclo continuo de mejora
-
-### 🎯 Modelo de IA Recomendado por Tarea
+### Modelos por Tarea
 
 | Tarea | Modelo Recomendado | Razón |
 |-------|-------------------|-------|
-| 📝 Documentación técnica | **Claude Sonnet 4.5** | Precisión en arquitectura |
+| 📝 Documentación técnica | **Claude Sonnet 4.5** | Precisión arquitectónica |
 | 🏗️ Diseño de arquitectura | **Claude Sonnet 4.5** | Análisis profundo |
-| ⚡ Código rápido/prototipos | **Grok Code Fast 1** | Velocidad de generación |
+| ⚡ Código rápido/prototipos | **Grok Code Fast 1** | Velocidad |
 | 🐛 Debugging complejo | **Claude Sonnet 4.5** | Razonamiento detallado |
 | 🔧 Scripts de automatización | **Grok Code Fast 1** | Implementación directa |
 
 ---
 
-## 🗓️ Roadmap Inicial
+## 🗓️ Roadmap
 
-| Semana | 🎯 Tarea | 📌 Entregable |
-|--------|----------|--------------|
-| **1** | Crear 5 repositorios en GitHub | Repos vacíos con README inicial |
-| **2** | Setup backend base (Node.js + Express + Prisma) | Endpoint `/health` funcionando |
-| **3** | Implementar autenticación JWT en `reservas-admin` | Login/register + middleware auth |
-| **4** | Replicar estructura en otros 4 proyectos | Mismo stack en todos |
-| **5** | Dockerizar primer proyecto | `docker-compose up` funcional |
-| **6** | Configurar CI/CD (GitHub Actions) | Tests automáticos en PRs |
-| **7+** | Desarrollo de funcionalidades específicas | Features por proyecto |
+| Semana | Tarea | Entregable |
+|--------|-------|-----------|
+| **1** | Crear 5 repositorios | Repos con README inicial |
+| **2** | Backend base con JWT | Endpoint `/health` + auth |
+| **3** | Replicar en otros proyectos | Mismo stack en todos |
+| **4** | Primera feature real | Funcionalidad completa |
+| **5** | Dockerizar | `docker-compose up` funcional |
+| **6** | CI/CD | Tests automáticos en PRs |
+| **7+** | Features específicas | Desarrollo por proyecto |
 
 ---
 
-## 🚀 Próximos Pasos Inmediatos
+## 🚀 Próximos Pasos
 
-### ✅ Checklist de Setup
+### Checklist Inmediato
 
 - [ ] **Crear repositorios en GitHub**
   ```bash
@@ -201,30 +201,16 @@ reservas-admin/
   gh repo create Aoneken/channel-manager --public
   ```
 
-- [ ] **Clonar repositorios en Codespace**
+- [ ] **Implementar backend base en `reservas-admin`**
   ```bash
-  cd /workspaces
-  gh repo clone Aoneken/reservas-admin
-  gh repo clone Aoneken/reservas-jugadores
-  # ... etc
+  npm init -y
+  npm install express prisma @prisma/client jsonwebtoken bcrypt dotenv
+  npx prisma init
   ```
 
-- [ ] **Implementar backend base en `reservas-admin`**
-  - Inicializar Node.js (`npm init -y`)
-  - Instalar dependencias (`express`, `prisma`, `jsonwebtoken`, `bcrypt`)
-  - Crear estructura de carpetas
-  - Configurar Prisma con PostgreSQL
-  - Implementar endpoint `/health`
+- [ ] **Crear estructura base y endpoint `/health`**
 
 - [ ] **Pedir siguiente instrucción a Grok** 🧠
-
----
-
-## 📚 Recursos Adicionales
-
-- 📄 [Manual de Inducción Completo](Manual_Inducción.md)
-- 🖥️ [Informe del Codespace](Informe_Completo_Inicial_del_Codespace.md)
-- 🔗 [Repositorio Principal](https://github.com/Aoneken/aok-apps)
 
 ---
 
