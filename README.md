@@ -188,10 +188,43 @@ graph TD
 
 ---
 
-## 🚀 Próximos Pasos
+## 🚀 Inicio Rápido
+
+### Entorno de Desarrollo Autónomo
+
+Este repositorio está **100% configurado** para trabajar inmediatamente:
+
+```bash
+# Clonar y abrir en Codespaces
+gh repo clone Aoneken/aok-apps
+code aok-apps
+
+# O directamente en Codespaces:
+# https://github.com/Aoneken/aok-apps → Code → Create codespace
+```
+
+**El entorno incluye:**
+
+✅ **VS Code** configurado con Prettier, ESLint, extensiones recomendadas  
+✅ **Dev Container** con Node.js 22, PostgreSQL client, Docker  
+✅ **Docker Compose** para base de datos PostgreSQL  
+✅ **GitHub Actions** para CI/CD automático  
+✅ **Configuración Prisma** lista para usar  
+✅ **Debugging** preconfigurado (F5)
+
+### Iniciar Base de Datos
+
+```bash
+docker-compose up -d
+# PostgreSQL corriendo en localhost:5432
+# DB: reservas | User: admin | Password: secret
+```
+
+### Próximos Pasos
 
 ### Checklist Inmediato
 
+- [x] **Configurar entorno de desarrollo** ✅
 - [ ] **Crear repositorios en GitHub**
   ```bash
   gh repo create Aoneken/reservas-admin --public

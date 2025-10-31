@@ -1,0 +1,22 @@
+{
+  "name": "AOK Apps Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "npm install -g prisma",
+  "remoteUser": "codespace",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": []
+    }
+  },
+  "forwardPorts": [3000, 5432],
+  "portsAttributes": {
+    "3000": { "label": "API" },
+    "5432": { "label": "PostgreSQL" }
+  }
+}
