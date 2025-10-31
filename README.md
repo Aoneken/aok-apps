@@ -5,7 +5,7 @@
 [![Docker](https://img.shields.io/badge/Docker-28.3.1-blue?logo=docker)](https://www.docker.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Ready-blue?logo=postgresql)](https://www.postgresql.org/)
 
-> **Repositorio raíz de 4 aplicaciones con sinergias técnicas.**  
+> **Repositorio raíz de 4 aplicaciones con sinergias técnicas.**
 > Entorno: GitHub Codespaces | Stack: Node.js, PostgreSQL, Docker | IA: GitHub Copilot
 
 ---
@@ -41,8 +41,8 @@
 | Helm      | v3.18.4 | Charts K8s |
 | GitHub CLI| 2.75.0 | Automatización |
 
-> **GitHub Copilot:** Activo con modelos:  
-> - **Claude Sonnet 4.5** (documentación, arquitectura)  
+> **GitHub Copilot:** Activo con modelos:
+> - **Claude Sonnet 4.5** (documentación, arquitectura)
 > - **Grok Code Fast 1** (código rápido, prototipos)
 
 ---
@@ -205,11 +205,11 @@ code aok-apps
 
 **El entorno incluye:**
 
-✅ **VS Code** configurado con Prettier, ESLint, extensiones recomendadas  
-✅ **Dev Container** con Node.js 22, PostgreSQL client, Docker  
-✅ **Docker Compose** para base de datos PostgreSQL  
-✅ **GitHub Actions** para CI/CD automático  
-✅ **Configuración Prisma** lista para usar  
+✅ **VS Code** configurado con Prettier, ESLint, extensiones recomendadas
+✅ **Dev Container** con Node.js 22, PostgreSQL client, Docker
+✅ **Docker Compose** para base de datos PostgreSQL
+✅ **GitHub Actions** para CI/CD automático
+✅ **Configuración Prisma** lista para usar
 ✅ **Debugging** preconfigurado (F5)
 
 ### Iniciar Base de Datos
@@ -249,8 +249,8 @@ docker-compose up -d
 
 ## 👤 Maintainer
 
-**Aoneken**  
-📧 comercial@aoneken.com  
+**Aoneken**
+📧 comercial@aoneken.com
 🔗 [GitHub](https://github.com/Aoneken)
 
 ---
@@ -260,13 +260,13 @@ docker-compose up -d
 ![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow)
 ![Última actualización](https://img.shields.io/badge/Última%20actualización-Octubre%202025-blue)
 
-**Versión:** 1.0.0  
+**Versión:** 1.0.0
 **Última actualización:** 31 de octubre de 2025
 
 ---
 
 <div align="center">
-  
+
 **🌟 Construido con GitHub Copilot & Grok IA 🌟**
 
 </div>

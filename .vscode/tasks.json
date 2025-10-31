@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Prisma: Generate",
+      "type": "shell",
+      "command": "npx prisma generate",
+      "group": "build"
+    },
+    {
+      "label": "Prisma: Migrate Dev",
+      "type": "shell",
+      "command": "npx prisma migrate dev",
+      "group": "build"
+    }
+  ]
+}
